@@ -8,13 +8,6 @@ def LCM(x, y):
         z = x
     else:
         z = y
-
-    while(True):
-        if((z % x == 0) and (z % y == 0)):
-            lcm = z
-            break
-        z += 1
-
-    return lcm
+    return x * y // math.gcd(x, y)
 count = math.floor(N/X) + math.floor(N/Y) - math.floor(N/LCM(X,Y))
 print(int(count))
